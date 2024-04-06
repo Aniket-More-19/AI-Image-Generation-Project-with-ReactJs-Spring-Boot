@@ -1,0 +1,27 @@
+.navbar-brand {
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: 5%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar {
+  height: 80px;
+}
+
+.create-btn-align {
+  margin-right: 5%;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+.createpost-text1 {
+  font-weight: bold;
+  font-size: 35px;
+  margin-left: 5.5%;
+  margin-top: 1%;
+}
+.createpost-text2 {
+  font-size: 20px;
+  margin-left: 5.5%;
+  margin-top: 1%;
+  font-weight: 350;
+}
