@@ -15,8 +15,8 @@ function App() {
         </div>
       </nav>
 
-      {/* <CreatePost /> */}
-      <Home />
+      <CreatePost />
+      {/* <Home /> */}
     </>
   );
 }

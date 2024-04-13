@@ -3,14 +3,22 @@ import styles from "./CreateForm.module.css";
 import aiImage from "../images/ai.png";
 
 const CreateForm = () => {
-  const prompt = useRef("");
+  const promptValue = useRef("");
 
   const handlePromptSubmit = (event) => {
     event.preventDefault();
 
-    const promptValue = prompt.current.value;
-    prompt.current.value = " ";
-    console.log(promptValue);
+    const prompt = promptValue.current.value;
+    promptValue.current.value = " ";
+    console.log(prompt);
+
+    fetch("http:localhost:8080/sendingPrompt", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(prompt),
+    });
   };
   return (
     <div className={styles["container"]}>
@@ -23,7 +31,7 @@ const CreateForm = () => {
             What's on your mind ?
           </label>
           <input
-            ref={prompt}
+            ref={promptValue}
             type="text"
             className={`form-control ${styles["prompt-input"]}`}
             id="text"
