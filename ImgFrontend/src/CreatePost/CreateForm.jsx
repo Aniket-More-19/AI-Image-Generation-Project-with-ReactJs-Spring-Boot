@@ -12,7 +12,8 @@ const CreateForm = () => {
     promptValue.current.value = " ";
     console.log(prompt);
 
-    fetch("http:localhost:8080/sendingPrompt", {
+    // sending user prompt to backend
+    fetch("http:localhost:8080/generateImage", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
